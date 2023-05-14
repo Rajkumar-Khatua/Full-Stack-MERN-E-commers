@@ -9,6 +9,7 @@ import { styled } from "styled-components";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { HeartBroken } from "@mui/icons-material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
 const Parent = styled.div`
   height: 50px;
@@ -166,6 +167,7 @@ const Navbar = () => {
               <ShoppingCartIcon color='secondary' />
             </Badge>
             <FavoriteBorderOutlinedIcon className='rightItems' />
+            <LightModeOutlinedIcon className='rightItems'/>
 
             {/* <span className='Login'>Login</span> */}
             <Login> Login</Login>
