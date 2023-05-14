@@ -9,8 +9,9 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 const Container = styled.div`
   display: flex;
-  background-color: #0c0c0cb0;
-  /* flex-wrap:wrap; */
+  background: #efefbb;
+  background: -webkit-linear-gradient(to right, #d4d3dd, #efefbb);
+  background: linear-gradient(to right, #d4d3dd, #efefbb);
 `;
 const Left = styled.div`
   flex: 1;
@@ -34,13 +35,14 @@ const SocialIcon = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: white;
+  color: #161212;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 20px;
 
   &:hover {
+  color: #d8d8d8;
     background-color: #${(props) => props.color};
     transition: all 0.5s ease;
   }

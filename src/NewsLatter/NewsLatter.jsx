@@ -3,8 +3,11 @@ import React from "react";
 import { styled } from "styled-components";
 
 const Container = styled.div`
-  height: 60vh;
-  background-color: grey;
+  height: 50vh;
+  background: #d9a7c7; 
+background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7); 
+background: linear-gradient(to right, #fffcdc, #d9a7c7); 
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +31,7 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 10px;
-  border: 0.5px solid #7a6868b7;
+  border: 0.5px solid #fffcdc;
   border-radius: 10px;
 `;
 const Input = styled.input`

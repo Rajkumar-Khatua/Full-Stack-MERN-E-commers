@@ -4,6 +4,7 @@ import {
   ShoppingBasket,
 } from "@mui/icons-material";
 import { styled } from "styled-components";
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Info = styled.div`
   opacity: 0;
@@ -72,7 +73,7 @@ const Product = ({ item }) => {
       <Image src={item.img} />
       <Info className='icon'>
         <Icon>
-          <ShoppingBasket />
+          <ShoppingCartOutlinedIcon />
         </Icon>
         <Icon>
           <SearchOutlined />
