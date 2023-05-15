@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { mobile } from "../../responsiveDesign";
 const Container = styled.div`
   flex: 1;
   margin: 3px;
@@ -9,6 +10,7 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 70px;
   position: relative;
+  ${mobile({ padding: "20px" })}
 `;
 const Image = styled.img`
   width: 100%;
@@ -18,6 +20,9 @@ const Image = styled.img`
   width: 500px;
   cursor: pointer;
   border-radius: 50%;
+
+  ${mobile({ borderRadius: 0, height: "30vh", borderRadius: "10px" })}
+
   &:hover {
     border: 5px solid #20b375d5;
   }
@@ -36,6 +41,9 @@ const Info = styled.div`
 const Title = styled.h2`
   color: #fff;
   font-size: 28px;
+
+  ${mobile({fontSize:"18px", marginBottom:"5px"})}
+
 `;
 const Button = styled.button`
   padding: 1em 4em;
@@ -50,8 +58,8 @@ const Button = styled.button`
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  font-weight:500;
-  font-size:20px;
+  font-weight: 500;
+  font-size: 20px;
 
   &:before {
     content: "";
@@ -81,27 +89,20 @@ const Button = styled.button`
     border-radius: 10px;
 
     @keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+
+     
+    }
   }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-  }
-  /* &:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 30px; */
+  ${mobile({ backgroundColor:"transparent", padding:"0.5em 2em" })}
 `;
 
 const CategoryItems = ({ item }) => {

@@ -1,10 +1,12 @@
 import React from "react";
 // import "./announcement.scss";
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 const Container = styled.div`
   height: 30px;
-  background-color: teal;
+  background: #fc4a1a;
+  background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+  background: linear-gradient(to right, #f7b733, #fc4a1a);
   color: white;
   display: flex;
   align-items: center;
@@ -13,15 +15,7 @@ const Container = styled.div`
   font-weight: 500;
 `;
 const Announcement = () => {
-  return (
-    // <div className='parent'>
-    //     <div className="style">
-
-    //   <h4><span>Great</span>Deal<span>  is Comming POSSIBLE with 100$</span></h4>
-    //     </div>
-    // </div>
-    <Container>Super Deal! Free Shipping on Orders Over $50</Container>
-  );
+  return <Container>Super Deal! Free Shipping on Orders Over $20</Container>;
 };
 
 export default Announcement;

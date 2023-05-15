@@ -21,12 +21,15 @@ import CheckIcon from "@mui/icons-material/Check";
 import SellIcon from "@mui/icons-material/Sell";
 import "./SP.scss";
 import UserRating from "../../components/UserRating/UserRating";
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import PermMediaOutlinedIcon from '@mui/icons-material/PermMediaOutlined';
+import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
+import PermMediaOutlinedIcon from "@mui/icons-material/PermMediaOutlined";
+import { mobile } from "../../responsiveDesign";
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
+
+  ${mobile({ padding: "5px", flexDirection: "column" })}
 `;
 const ImgContainer = styled.div`
   flex: 1;
@@ -35,10 +38,12 @@ const Image = styled.img`
   width: 100%;
   height: 80vh;
   object-fit: cover;
+  ${mobile({ height: "65vh", objectFit: "cover" })}
 `;
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0px 50px;
+  ${mobile({ padding: "0px 20px" })}
 `;
 const Title = styled.h1`
   font-weight: 200;
@@ -59,11 +64,13 @@ const FilterContainer = styled.div`
   padding: 20px;
   margin: 30px 0px;
   border-radius: 15px;
+  ${mobile({ width: "100%", padding: "10px", margin: "10px 0px" })}
 `;
 const ColDirContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({ flexDirection: "column" })}
 `;
 const Filter = styled.div`
   display: flex;
@@ -97,13 +104,14 @@ const AddContainer = styled.div`
   padding: 20px;
   margin: 30px 0px;
   border-radius: 15px;
+  ${mobile({ width: "100%", padding: "10px" })}
 `;
 const AspectedDelivery = styled.span`
   font-size: 14px;
   font-weight: bold;
   display: flex;
-  /* flex-direction: column; */
   padding: 15px;
+  ${mobile({ flexDirection: "column" })}
 `;
 const Address = styled.span`
   font-size: 13px;
@@ -153,6 +161,8 @@ const UsefullIcons = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  /* TODO */
 `;
 const Icons = styled.div`
   display: flex;
@@ -193,14 +203,18 @@ const Quality = styled.span`
   display: flex;
   align-items: center;
   background-color: #b8b5b587;
+
+  ${mobile({ fontSize: "13px", padding: "3px", fontWeight: "bold" })}
 `;
 const ProductDetailsContainer = styled.div`
   border: 1px solid #b8b5b587;
   border-radius: 10px;
+  ${mobile({ flexDirection: "column" })}
 `;
 const TitlePro = styled.h1`
   font-size: 22px;
   padding: 10px;
+  ${mobile({ fontSize: "14px", padding: "5px" })}
 `;
 const Details = styled.div`
   display: flex;
@@ -211,17 +225,21 @@ const Key = styled.span`
   font-size: 15px;
   color: #695f5f;
   font-weight: bold;
+  ${mobile({ fontSize: "12px" })}
 `;
 const Value = styled.span`
   font-size: 14px;
   color: #695f5f;
   margin-left: 10px;
+  ${mobile({ fontSize: "12px", marginLeft: "3px" })}
 `;
 const Reviews = styled.div`
   padding: 10px;
+  ${mobile({ fontSize: "10px", marginLeft: "5px", padding: "5px" })}
 `;
 const ReviewTitle = styled.h1`
   font-size: 22px;
+  ${mobile({ fontSize: "16px" })}
 `;
 const SellProductsMercheat = styled.div`
   display: flex;
@@ -229,6 +247,13 @@ const SellProductsMercheat = styled.div`
   justify-content: flex-end;
   flex-direction: column;
   margin-bottom: 10px;
+
+  ${mobile({
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    marginLeft: "10px",
+  })}
 `;
 const SellProductTitle = styled.span`
   font-size: 13px;
@@ -247,38 +272,40 @@ const SellProductBtn = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({ padding: "3px 10px", marginLeft: "10px" })}
 `;
 const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 50px;
+  ${mobile({ padding: "10px" })}
 `;
 const ReviewReview = styled.h1`
   font-size: 20px;
+  ${mobile({ fontSize: "15px" })}
 `;
 const Input = styled.input`
   width: 40%;
   border: 0.5px solid lightgrey;
-  padding:10px;
+  padding: 10px;
   border-radius: 10px;
   outline: none;
+  ${mobile({ width: "100%" })}
 `;
 const SendReview = styled.div`
   /* border: 1px solid black; */
   display: flex;
   align-items: center;
- 
-  
 `;
 const SendReviewBtn = styled.button`
- padding:10px;
- border: none;
- outline : none;
- background-color: teal;
- border-radius: 10px;
- color: #fff;
- font-weight: bold;
- /* flex-direction: column; */
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: teal;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  /* flex-direction: column; */
 `;
 const Product = () => {
   return (
@@ -339,7 +366,7 @@ const Product = () => {
               <RatingContainer>
                 <TopBarnd>
                   <Quality>
-                    Quality Assurance{" "}
+                    Quality Assurance
                     <VerifiedSharpIcon className='VerifyBatch' />
                   </Quality>
                   <Title>VASTRAMAY</Title>
@@ -348,21 +375,21 @@ const Product = () => {
                   <CheckIcon
                     className='checkIcon'
                     fontSize='inherit'
-                  />{" "}
+                  />
                   10K+ Rating
                 </Rating>
                 <Rating>
                   <CheckIcon
                     className='checkIcon'
                     fontSize='inherit'
-                  />{" "}
+                  />
                   10 days ago launch
                 </Rating>
                 <Rating>
                   <CheckIcon
                     className='checkIcon'
                     fontSize='inherit'
-                  />{" "}
+                  />
                   Varified Seller
                 </Rating>
               </RatingContainer>
@@ -396,7 +423,11 @@ const Product = () => {
           <SellProductsMercheat>
             <SellProductTitle>Have one to sell ? </SellProductTitle>
             <SellProductBtn>
-              Sell <ArrowRightAltSharp className='Sell' />
+              Sell{" "}
+              <ArrowRightAltSharp
+                className='Sell'
+                fontSize='small'
+              />
             </SellProductBtn>
           </SellProductsMercheat>
 
@@ -426,8 +457,8 @@ const Product = () => {
         <InputContainer>
           <ReviewReview>Write a review </ReviewReview>
           <SendReview>
-            <Input />
-            <PermMediaOutlinedIcon className="Media"/>
+            <Input placeholder='Write Review' />
+            <PermMediaOutlinedIcon className='Media' />
             <SendReviewBtn>Send</SendReviewBtn>
           </SendReview>
         </InputContainer>

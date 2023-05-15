@@ -7,17 +7,26 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import LocationOnSharpIcon from "@mui/icons-material/LocationOnSharp";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
+import { mobile } from '../../responsiveDesign';
 const Container = styled.div`
   display: flex;
   background: #efefbb;
   background: -webkit-linear-gradient(to right, #d4d3dd, #efefbb);
   background: linear-gradient(to right, #d4d3dd, #efefbb);
+
+  ${mobile({ flexDirection:"column", flexWrap:"wrap", alignItems: "center", justifyContent: "center"})}
+
 `;
 const Left = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  ${mobile({ borderBottom: "1px solid lightgray"})}
+
+  ${mobile({ alignItems: "center", justifyContent: "center"})}
+
+
 `;
 const Logo = styled.h1`
   font-size: 20px;
@@ -27,6 +36,9 @@ const Logo = styled.h1`
 const Desc = styled.span`
   margin: 20px 0px;
   font-size: 14px;
+
+  ${mobile({textAlign:"center"})}
+
 `;
 const SocialConatiner = styled.div`
   display: flex;
@@ -50,6 +62,8 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ borderBottom: "1px solid lightgray"})}
+
 `;
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -61,6 +75,7 @@ const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   cursor: pointer;
+
 `;
 const ListItem = styled.li`
   width: 50%;

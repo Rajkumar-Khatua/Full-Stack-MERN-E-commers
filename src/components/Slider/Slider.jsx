@@ -5,6 +5,7 @@ import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRig
 import styled from "styled-components";
 import { sliderItems } from "../../../Data";
 import { ArrowRightAltSharp } from "@mui/icons-material";
+import { mobile } from '../../responsiveDesign';
 
 const Container = styled.div`
   width: 100%;
@@ -12,6 +13,8 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  ${mobile({display: "none"})}
+
 `;
 
 const Arrow = styled.div`

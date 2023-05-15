@@ -9,8 +9,8 @@ import { styled } from "styled-components";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { HeartBroken } from "@mui/icons-material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
-
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import { mobile } from "../../responsiveDesign";
 const Parent = styled.div`
   height: 50px;
   /* border-bottom: 0.5px solid lightgray; */
@@ -22,11 +22,15 @@ const Parent = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  z-index:999;
+  z-index: 999;
+
+  ${mobile({ height: "50px", padding:"2px"})}
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
+  align-items: center;
+  ${mobile({ padding: "10px 0px" })}
 `;
 const Left = styled.div`
   /* margin-top: 15px; */
@@ -39,11 +43,13 @@ const Logo = styled.span`
   font-size: 20px;
   font-weight: bolder;
   color: #1c8d73;
+  ${mobile({ fontSize: "15px" })}
 `;
 const Language = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({ display: "none" })}
 `;
 const Middle = styled.div`
   /* margin-top: 15px; */
@@ -52,6 +58,9 @@ const Middle = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 20px;
+
+  ${mobile({marginLeft: '5px', flex:1, marginLeft:"0px", marginRight:"12px"})}
+
 `;
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
@@ -63,6 +72,8 @@ const SearchContainer = styled.div`
   width: 50%;
   align-items: center;
   justify-content: flex-end;
+
+  ${mobile({ border: "none", padding: "2px" })}
 
   &:hover {
     border-color: rgb(26, 24, 27);
@@ -76,6 +87,8 @@ const Input = styled.input`
   border: none;
   outline: none;
   border-right: 0.5px solid lightgray;
+
+  ${mobile({ display: "15px", borderRight: "none", display: "none"})}
 `;
 
 const Right = styled.div`
@@ -84,15 +97,21 @@ const Right = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+
 `;
 const RightItems = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 `;
 const Login = styled.span`
   margin-left: 20px;
   padding: 10px 15px;
+
+  ${mobile({marginLeft: '5px', padding: '5px'})}
+
 
   border-radius: 10px;
   color: #ec0a7b;
@@ -113,6 +132,10 @@ const Register = styled.span`
 
   border-radius: 10px;
   color: #ffff;
+
+  ${mobile({marginLeft: '5px', padding: '5px'})}
+
+
 `;
 const Navbar = () => {
   const options = ["English", "Hindi"];
@@ -167,7 +190,7 @@ const Navbar = () => {
               <ShoppingCartIcon color='secondary' />
             </Badge>
             <FavoriteBorderOutlinedIcon className='rightItems' />
-            <LightModeOutlinedIcon className='rightItems'/>
+            <LightModeOutlinedIcon className='rightItems' />
 
             {/* <span className='Login'>Login</span> */}
             <Login> Login</Login>
